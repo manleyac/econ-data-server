@@ -7,9 +7,9 @@ const dataFetcher = require("./data/dataFetcher.js");
 const pricePredicter = require("./data/pricePredicter.js");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const corsOptions = {
-  origin: procexx.env.ALLOWED_ORIGIN
+  origin: process.env.ALLOWED_ORIGIN
 }
 
 app.use(express.json());

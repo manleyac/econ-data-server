@@ -1,8 +1,6 @@
 const axios = require("axios");
-const sampleData = require("./sampleData.json");
 const dataParser = require("./dataParser.js");
 const dataCalculator = require("./dataCalculator.js");
-const pricePredicter = require("./pricePredicter.js");
 
 function dataFetcher(ticker) {
   const requestURL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=${process.env.API_KEY}`;

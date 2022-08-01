@@ -7,6 +7,7 @@ function monthlyDataFetcher(ticker) {
   return axios
     .get(requestURL)
     .then((response) => {
+      console.log(response)
       const data = response["data"]["Monthly Adjusted Time Series"];
       const { selectedDates, volData, monthlyReturns } =
         monthlyDataParser(data);

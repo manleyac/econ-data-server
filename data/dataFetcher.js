@@ -3,7 +3,7 @@ const dataParser = require("./dataParser.js");
 const dataCalculator = require("./dataCalculator.js");
 
 function dataFetcher(ticker) {
-  const requestURL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${ticker}&apikey=${process.env.API_KEY}`;
+  const requestURL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${ticker}&apikey=${process.env.API_KEY}`;
   return axios
     .get(requestURL)
     .then((response) => {
